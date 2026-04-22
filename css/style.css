@@ -799,3 +799,26 @@ section::before {
 
   .cta-btns { flex-direction: column; gap: 1rem; }
 }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.site-footer p {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.05em;
+}
+
+.site-footer a {
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: var(--gold);
+}
