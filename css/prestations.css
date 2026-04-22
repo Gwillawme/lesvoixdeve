@@ -413,38 +413,74 @@ td:first-child {
   margin-top: 1.2rem;
 }
 
-/* ── Bénévolat ──────────────────────────────────────────────── */
+/* ── Bénévolat ─────────────────────────────────────────────── */
 .benevolat-bloc {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 3px;
-  padding: 2rem 2.5rem;
+  background: linear-gradient(135deg, rgba(107,79,160,0.18) 0%, rgba(45,27,78,0.5) 100%);
+  border: 1px solid rgba(201,169,110,0.4);
+  border-radius: 4px;
+  padding: 2.5rem;
   margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Liseré haut doré */
+.benevolat-bloc::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+}
+
+.benevolat-header {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .benevolat-icon {
-  font-size: 2rem;
-  opacity: 0.7;
+  font-size: 1.6rem;
+  color: var(--gold);
   flex-shrink: 0;
   line-height: 1;
-  margin-top: 0.2rem;
 }
 
 .benevolat-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: var(--white);
-  margin-bottom: 0.6rem;
+  flex: 1;
+}
+
+.benevolat-badge {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: rgba(201,169,110,0.15);
+  color: var(--gold);
+  border: 1px solid rgba(201,169,110,0.35);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 .benevolat-desc {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--violet-pale);
-  line-height: 1.75;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.benevolat-cta-text {
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-style: italic;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
 /* ── CTA Bloc ───────────────────────────────────────────────── */
