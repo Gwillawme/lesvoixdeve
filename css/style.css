@@ -901,3 +901,37 @@ section::before {
   text-transform: uppercase;
   color: var(--gold);
 }
+
+/* ── Footer réseaux sociaux ─────────────────────────────────── */
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.footer-social-link svg {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.footer-social-link:hover {
+  color: var(--gold);
+}
+
+.footer-social-link:hover svg {
+  opacity: 1;
+}
