@@ -265,6 +265,7 @@ section::before {
   line-height: 1.0;
   letter-spacing: -0.02em;
   margin-bottom: 2.5rem;
+  text-align: center;
   opacity: 0;
   animation: fadeUp 0.9s ease forwards;
   animation-delay: 0.4s;
@@ -301,6 +302,7 @@ section::before {
   color: var(--violet-pale);
   line-height: 1.85;
   margin-bottom: 3rem;
+  text-align: center;
   opacity: 0;
   animation: fadeUp 0.9s ease forwards;
   animation-delay: 0.7s;
