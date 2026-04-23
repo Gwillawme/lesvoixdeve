@@ -408,6 +408,8 @@ section::before {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--violet-soft);
+  text-decoration: none;
+  display: block;
 }
 
 .scroll-line {
@@ -809,6 +811,8 @@ section::before {
   .section-cta { padding: 5rem 1.5rem; }
 
   .cta-btns { flex-direction: column; gap: 1rem; }
+
+  .scroll-hint { display: none; }
 }
 
 /* ── Footer ─────────────────────────────────────────────────── */
