@@ -198,9 +198,12 @@ section::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 3rem 5rem;
+  align-items: center;
+  padding: 8rem 2rem 5rem;
   overflow: hidden;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Cercle haut droite */
@@ -226,8 +229,8 @@ section::before {
 }
 
 .hero-inner {
+  width: 100%;
   max-width: 860px;
-  margin: 0 auto;
   position: relative;
   z-index: 2;
   text-align: center;
