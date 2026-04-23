@@ -609,3 +609,73 @@ td:first-child {
 .site-footer a:hover {
   color: var(--gold);
 }
+
+/* ── Bloc Don ───────────────────────────────────────────────── */
+.don-bloc {
+  background: linear-gradient(135deg, rgba(107,79,160,0.12) 0%, rgba(45,27,78,0.45) 100%);
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 4px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.don-bloc::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+}
+
+.don-bloc-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.don-bloc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.don-bloc-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.don-bloc-desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+}
+
+.don-bloc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(201,169,110,0.08);
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 40px;
+  padding: 0.6rem 1.4rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.don-badge-icon {
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+.don-badge-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
