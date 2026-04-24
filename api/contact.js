@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
   const { prenom, canton, besoin, enfants, situation, modeContact, dispo, telephone, email } = req.body;
 
-  if (!prenom || !canton || !besoin || !enfants || !modeContact || !dispo || !telephone || !email) {
+  if (!prenom || !canton || !besoin || !enfants || !modeContact || !dispo || !telephone) {
     return res.status(400).json({ error: 'Champs obligatoires manquants' });
   }
 
@@ -90,11 +90,9 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        // Valider que l'email est au bon format
-        from: 'Les Voix d\'\u00c8ve <contact@lesvoixdeve.ch>',
+        from: 'Les Voix d\'Ève <contact@lesvoixdeve.ch>',
         to: ['lesvoixdeve@outlook.com'],
-        reply_to: email.trim(),
-        subject: `Nouvelle demande de ${prenom} (${canton}) — Les Voix d'\u00c8ve`,
+        subject: `Nouvelle demande de ${prenom} (${canton}) — Les Voix d'Ève`,
         html: htmlBody,
       }),
     });
