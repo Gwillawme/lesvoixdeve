@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Nous contacter – Les Voix d'Ève</title>
-  <meta name="description" content="Contactez Les Voix d'Ève. Formulaire confidentiel pour demander un accompagnement ou poser une question." />
+  <title>Demande d'accompagnement – Les Voix d'Ève</title>
+  <meta name="description" content="Formulaire confidentiel de demande d'accompagnement. Les Voix d'Ève vous recontacte dans les meilleurs délais." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lesvoixdeve.ch/contact.html" />
-
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="favicon.svg" />
   <link rel="stylesheet" href="css/fonts.css" />
@@ -32,12 +30,12 @@
     </button>
   </nav>
 
-  <!-- HERO CONTACT -->
+  <!-- HERO -->
   <section class="contact-hero">
     <div class="contact-hero-inner">
       <p class="contact-eyebrow"><span class="eyebrow-line"></span> Formulaire confidentiel</p>
-      <h1 class="contact-title">Prendre <em>contact</em></h1>
-      <p class="contact-subtitle">Ce formulaire est confidentiel. Votre message sera lu avec attention par Laetitia ou Vanessa. Vous recevrez une réponse dans les meilleurs délais.</p>
+      <h1 class="contact-title">Demande d'<em>accompagnement</em></h1>
+      <p class="contact-subtitle">Bienvenue. Ce formulaire est confidentiel. Il nous permet de mieux comprendre votre situation avant de vous recontacter. Prenez le temps qu'il vous faut.</p>
     </div>
   </section>
 
@@ -45,15 +43,15 @@
   <section class="contact-section">
     <div class="contact-inner">
 
-      <!-- État succès -->
+      <!-- Succès -->
       <div class="form-success" id="formSuccess" style="display:none;">
         <div class="success-icon">✦</div>
-        <h2 class="success-title">Message envoyé</h2>
-        <p class="success-text">Merci de nous avoir contactées. Laetitia ou Vanessa vous répondra dans les meilleurs délais. Vous n'êtes pas seule.</p>
+        <h2 class="success-title">Demande envoyée</h2>
+        <p class="success-text">Merci de nous avoir contactées. Laetitia ou Vanessa vous répondra dans les meilleurs délais selon vos disponibilités. Vous n'êtes pas seule.</p>
         <a href="index.html" class="btn-back">← Retour à l'accueil</a>
       </div>
 
-      <!-- État erreur -->
+      <!-- Erreur -->
       <div class="form-error-banner" id="formError" style="display:none;">
         <p>Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous écrire directement à <a href="mailto:lesvoixdeve@outlook.com">lesvoixdeve@outlook.com</a></p>
       </div>
@@ -62,118 +60,150 @@
 
         <!-- Prénom -->
         <div class="form-group">
-          <label class="form-label" for="prenom">Votre prénom <span class="required">*</span></label>
+          <label class="form-label" for="prenom">Prénom <span class="required">*</span></label>
           <input class="form-input" type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name" required />
-          <span class="form-hint">Vous pouvez utiliser un prénom d'emprunt si vous le souhaitez.</span>
+        </div>
+
+        <!-- Canton -->
+        <div class="form-group">
+          <label class="form-label" for="canton">De quel canton êtes-vous <span class="required">*</span></label>
+          <select class="form-select" id="canton" name="canton" required>
+            <option value="">— Sélectionner votre canton —</option>
+            <option value="AG">Argovie (AG)</option>
+            <option value="AI">Appenzell Rhodes-Intérieures (AI)</option>
+            <option value="AR">Appenzell Rhodes-Extérieures (AR)</option>
+            <option value="BE">Berne (BE)</option>
+            <option value="BL">Bâle-Campagne (BL)</option>
+            <option value="BS">Bâle-Ville (BS)</option>
+            <option value="FR">Fribourg (FR)</option>
+            <option value="GE">Genève (GE)</option>
+            <option value="GL">Glaris (GL)</option>
+            <option value="GR">Grisons (GR)</option>
+            <option value="JU">Jura (JU)</option>
+            <option value="LU">Lucerne (LU)</option>
+            <option value="NE">Neuchâtel (NE)</option>
+            <option value="NW">Nidwald (NW)</option>
+            <option value="OW">Obwald (OW)</option>
+            <option value="SG">Saint-Gall (SG)</option>
+            <option value="SH">Schaffhouse (SH)</option>
+            <option value="SO">Soleure (SO)</option>
+            <option value="SZ">Schwytz (SZ)</option>
+            <option value="TG">Thurgovie (TG)</option>
+            <option value="TI">Tessin (TI)</option>
+            <option value="UR">Uri (UR)</option>
+            <option value="VD">Vaud (VD)</option>
+            <option value="VS">Valais (VS)</option>
+            <option value="ZG">Zoug (ZG)</option>
+            <option value="ZH">Zurich (ZH)</option>
+            <option value="autre">Autre / Hors Suisse</option>
+          </select>
+        </div>
+
+        <!-- Besoin -->
+        <div class="form-group">
+          <label class="form-label">De quoi avez-vous besoin ? <span class="required">*</span></label>
+          <div class="radio-group" id="besoinGroup">
+            <label class="radio-option">
+              <input type="radio" name="besoin" value="Être écoutée sans jugement" required />
+              <span class="radio-custom"></span>
+              <span class="radio-text">Être écoutée sans jugement</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="besoin" value="Aide pour comprendre mes droits" />
+              <span class="radio-custom"></span>
+              <span class="radio-text">Aide pour comprendre mes droits</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="besoin" value="Orientation vers des ressources" />
+              <span class="radio-custom"></span>
+              <span class="radio-text">Orientation vers des ressources</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="besoin" value="Accompagnement dans les démarches" />
+              <span class="radio-custom"></span>
+              <span class="radio-text">Accompagnement dans les démarches</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="besoin" value="Je ne sais pas encore" />
+              <span class="radio-custom"></span>
+              <span class="radio-text">Je ne sais pas encore</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Enfants -->
+        <div class="form-group">
+          <label class="form-label">Y a-t-il des enfants concernés ? <span class="required">*</span></label>
+          <div class="radio-group" id="enfantsGroup">
+            <label class="radio-option">
+              <input type="radio" name="enfants" value="Oui" required />
+              <span class="radio-custom"></span>
+              <span class="radio-text">Oui</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="enfants" value="Non" />
+              <span class="radio-custom"></span>
+              <span class="radio-text">Non</span>
+            </label>
+          </div>
         </div>
 
         <!-- Situation -->
         <div class="form-group">
-          <label class="form-label">Votre situation actuelle <span class="required">*</span></label>
-          <div class="radio-group">
+          <label class="form-label" for="situation">Décrivez votre situation en quelques mots</label>
+          <textarea class="form-textarea" id="situation" name="situation" rows="5" placeholder="Optionnel / Ne partagez que ce que vous vous sentez à l'aise de partager"></textarea>
+        </div>
+
+        <!-- Mode de contact -->
+        <div class="form-group">
+          <label class="form-label">Comment souhaitez-vous être contactée ? <span class="required">*</span></label>
+          <div class="radio-group" id="contactGroup">
             <label class="radio-option">
-              <input type="radio" name="situation" value="en-cours" required />
+              <input type="radio" name="modeContact" value="WhatsApp" required />
               <span class="radio-custom"></span>
-              <span class="radio-text">Je vis actuellement une situation de violence</span>
+              <span class="radio-text">WhatsApp</span>
             </label>
             <label class="radio-option">
-              <input type="radio" name="situation" value="sortie" />
+              <input type="radio" name="modeContact" value="E-mail" />
               <span class="radio-custom"></span>
-              <span class="radio-text">Je suis sortie de la situation</span>
+              <span class="radio-text">E-mail</span>
             </label>
             <label class="radio-option">
-              <input type="radio" name="situation" value="reconstruction" />
+              <input type="radio" name="modeContact" value="Appel téléphonique" />
               <span class="radio-custom"></span>
-              <span class="radio-text">Je suis en phase de reconstruction</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="situation" value="entourage" />
-              <span class="radio-custom"></span>
-              <span class="radio-text">Je suis un membre de l'entourage</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="situation" value="professionnel" />
-              <span class="radio-custom"></span>
-              <span class="radio-text">Je suis un·e professionnel·le</span>
+              <span class="radio-text">Appel téléphonique</span>
             </label>
           </div>
         </div>
 
-        <!-- Durée -->
+        <!-- Disponibilités -->
         <div class="form-group">
-          <label class="form-label" for="duree">Depuis combien de temps ?</label>
-          <select class="form-select" id="duree" name="duree">
-            <option value="">— Sélectionner (facultatif) —</option>
-            <option value="moins-6-mois">Moins de 6 mois</option>
-            <option value="6-mois-2-ans">Entre 6 mois et 2 ans</option>
-            <option value="plus-2-ans">Plus de 2 ans</option>
-            <option value="ne-sait-pas">Je ne sais pas / Je préfère ne pas répondre</option>
-          </select>
+          <label class="form-label" for="dispo">Vos disponibilités <span class="required">*</span></label>
+          <input class="form-input" type="text" id="dispo" name="dispo" placeholder="Ex : soirs en semaine, week-end matin" required />
         </div>
 
-        <!-- Type de soutien -->
+        <!-- Téléphone -->
         <div class="form-group">
-          <label class="form-label">Quel type de soutien recherchez-vous ?</label>
-          <div class="checkbox-group">
-            <label class="checkbox-option">
-              <input type="checkbox" name="soutien" value="ecoute" />
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-text">Écoute et soutien émotionnel</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="soutien" value="guidance" />
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-text">Guidance dans les démarches</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="soutien" value="accompagnement" />
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-text">Accompagnement physique (rendez-vous, police…)</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="soutien" value="groupe" />
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-text">Groupe de parole</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="soutien" value="ressources" />
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-text">Ressources et informations</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="soutien" value="autre" />
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-text">Autre</span>
-            </label>
-          </div>
+          <label class="form-label" for="telephone">Votre numéro de téléphone <span class="required">*</span></label>
+          <input class="form-input" type="tel" id="telephone" name="telephone" placeholder="+41 XX XXX XX XX" autocomplete="tel" required />
         </div>
 
-        <!-- Message -->
+        <!-- Email -->
         <div class="form-group">
-          <label class="form-label" for="message">Votre message <span class="required">*</span></label>
-          <textarea class="form-textarea" id="message" name="message" rows="6" placeholder="Décrivez votre situation ou votre demande en quelques mots. Il n'y a pas de bonne ou mauvaise façon de le formuler." required></textarea>
-        </div>
-
-        <!-- Accord confidentialité -->
-        <div class="form-group">
-          <label class="checkbox-option checkbox-option--accord">
-            <input type="checkbox" name="accord" id="accord" required />
-            <span class="checkbox-custom"></span>
-            <span class="checkbox-text">J'ai lu et j'accepte la <a href="mentions-legales.html" target="_blank">politique de confidentialité</a>. Je comprends que mes données sont utilisées uniquement pour traiter ma demande. <span class="required">*</span></span>
-          </label>
+          <label class="form-label" for="email">Votre adresse e-mail <span class="required">*</span></label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.com" autocomplete="email" required />
         </div>
 
         <!-- Submit -->
         <div class="form-submit">
           <button type="submit" class="btn-submit" id="submitBtn">
-            <span class="btn-text">Envoyer mon message</span>
+            <span class="btn-text">Envoyer ma demande →</span>
             <span class="btn-loading" style="display:none;">Envoi en cours…</span>
           </button>
-          <p class="form-confidential">✦ Formulaire 100% confidentiel · Réponse sous 48h</p>
+          <p class="form-confidential">✦ Formulaire 100% confidentiel · Réponse selon vos disponibilités</p>
         </div>
 
       </form>
-
     </div>
   </section>
 
@@ -230,7 +260,6 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Gestion du formulaire de contact
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = submitBtn.querySelector('.btn-text');
@@ -241,25 +270,28 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Validation
       const prenom = document.getElementById('prenom').value.trim();
-      const situation = form.querySelector('input[name="situation"]:checked');
-      const message = document.getElementById('message').value.trim();
-      const accord = document.getElementById('accord').checked;
+      const canton = document.getElementById('canton').value;
+      const besoin = form.querySelector('input[name="besoin"]:checked');
+      const enfants = form.querySelector('input[name="enfants"]:checked');
+      const modeContact = form.querySelector('input[name="modeContact"]:checked');
+      const dispo = document.getElementById('dispo').value.trim();
+      const telephone = document.getElementById('telephone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const situation = document.getElementById('situation').value.trim();
 
-      if (!prenom || !situation || !message || !accord) {
-        // Marquer les champs invalides
-        if (!prenom) document.getElementById('prenom').classList.add('input-error');
-        if (!situation) form.querySelector('.radio-group').classList.add('group-error');
-        if (!message) document.getElementById('message').classList.add('input-error');
-        if (!accord) document.getElementById('accord').closest('.checkbox-option').classList.add('option-error');
-        return;
-      }
+      // Validation
+      let valid = true;
+      if (!prenom) { document.getElementById('prenom').classList.add('input-error'); valid = false; }
+      if (!canton) { document.getElementById('canton').classList.add('input-error'); valid = false; }
+      if (!besoin) { document.getElementById('besoinGroup').classList.add('group-error'); valid = false; }
+      if (!enfants) { document.getElementById('enfantsGroup').classList.add('group-error'); valid = false; }
+      if (!modeContact) { document.getElementById('contactGroup').classList.add('group-error'); valid = false; }
+      if (!dispo) { document.getElementById('dispo').classList.add('input-error'); valid = false; }
+      if (!telephone) { document.getElementById('telephone').classList.add('input-error'); valid = false; }
+      if (!email) { document.getElementById('email').classList.add('input-error'); valid = false; }
+      if (!valid) return;
 
-      // Récupérer les checkboxes soutien
-      const soutienChecked = [...form.querySelectorAll('input[name="soutien"]:checked')].map(el => el.value);
-
-      // UI loading
       btnText.style.display = 'none';
       btnLoading.style.display = 'inline';
       submitBtn.disabled = true;
@@ -270,12 +302,12 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            prenom,
-            situation: situation.value,
-            duree: document.getElementById('duree').value,
-            soutien: soutienChecked,
-            message,
-            accord: true,
+            prenom, canton,
+            besoin: besoin.value,
+            enfants: enfants.value,
+            situation,
+            modeContact: modeContact.value,
+            dispo, telephone, email,
           }),
         });
 
@@ -295,12 +327,11 @@
       }
     });
 
-    // Retirer les erreurs au changement
+    // Retirer erreurs au changement
     form.querySelectorAll('input, textarea, select').forEach(el => {
       el.addEventListener('change', () => {
         el.classList.remove('input-error');
-        el.closest('.form-group')?.querySelector('.radio-group')?.classList.remove('group-error');
-        el.closest('.checkbox-option')?.classList.remove('option-error');
+        document.querySelectorAll('.radio-group').forEach(g => g.classList.remove('group-error'));
       });
     });
   </script>
