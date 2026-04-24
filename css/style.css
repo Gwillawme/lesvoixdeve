@@ -1089,4 +1089,7 @@ section::before {
   .urgence-card--primary {
     grid-column: span 2;
   }
+  .urgence-card:last-child {
+    grid-column: span 2;
+  }
 }
