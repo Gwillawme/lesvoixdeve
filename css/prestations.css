@@ -822,3 +822,98 @@ td:first-child {
 .footer-bottom a:hover {
   color: var(--gold);
 }
+/* ── Section Urgences ────────────────────────────────────────── */
+.section-urgences {
+  padding: 4rem 2rem;
+  background: rgba(180, 20, 40, 0.06);
+  border-top: 1px solid rgba(220, 50, 70, 0.15);
+  border-bottom: 1px solid rgba(220, 50, 70, 0.15);
+}
+
+.urgences-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.urgences-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(220, 80, 80, 0.7);
+  margin-bottom: 0.6rem;
+}
+
+.urgences-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.urgences-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.urgence-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.urgence-card:hover {
+  background: rgba(220, 50, 70, 0.12);
+  border-color: rgba(220, 50, 70, 0.4);
+  transform: translateY(-2px);
+}
+
+.urgence-card--primary {
+  background: rgba(220, 50, 70, 0.1);
+  border-color: rgba(220, 50, 70, 0.3);
+}
+
+.urgence-card--primary:hover {
+  background: rgba(220, 50, 70, 0.2);
+  border-color: rgba(220, 50, 70, 0.6);
+}
+
+.urgence-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+}
+
+.urgence-card--primary .urgence-num {
+  color: #ff7070;
+}
+
+.urgence-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .urgences-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .urgence-card--primary {
+    grid-column: span 2;
+  }
+}
