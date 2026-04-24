@@ -8,8 +8,14 @@ export default async function handler(req, res) {
 
   const { prenom, canton, besoin, enfants, situation, modeContact, dispo, telephone, email } = req.body;
 
-  if (!prenom || !canton || !besoin || !enfants || !modeContact || !dispo || !telephone) {
+  if (!prenom || !canton || !besoin || !enfants || !modeContact || !dispo || !telephone || !email) {
     return res.status(400).json({ error: 'Champs obligatoires manquants' });
+  }
+
+  // Valider le format de l'email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ error: 'Email invalide' });
   }
 
   const htmlBody = `
@@ -92,6 +98,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         from: 'Les Voix d\'Ève <contact@lesvoixdeve.ch>',
         to: ['lesvoixdeve@outlook.com'],
+        reply_to: email.trim(),
         subject: `Nouvelle demande de ${prenom} (${canton}) — Les Voix d'Ève`,
         html: htmlBody,
       }),
