@@ -90,10 +90,10 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Les Voix d\'Ève <onboarding@resend.dev>',
+        from: 'Les Voix d\'\u00c8ve <contact@lesvoixdeve.ch>',
         to: ['lesvoixdeve@outlook.com'],
         reply_to: email,
-        subject: `Nouvelle demande de ${prenom} (${canton}) — Les Voix d'Ève`,
+        subject: `Nouvelle demande de ${prenom} (${canton}) — Les Voix d'\u00c8ve`,
         html: htmlBody,
       }),
     });
